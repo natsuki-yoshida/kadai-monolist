@@ -11,19 +11,18 @@ class CreateItemsTable extends Migration
      *
      * @return void
      */
-    public function up()
+     public function up()
     {
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('code');
+            $table->string('name');
+            $table->string('url');
+            $table->string('image_url');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('items');
