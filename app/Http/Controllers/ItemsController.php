@@ -53,7 +53,7 @@ class ItemsController extends Controller
             'items' => $items,
         ]);
     }
-  }
+
 
     /**
      * Store a newly created resource in storage.
@@ -61,10 +61,6 @@ class ItemsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
 
     /**
      * Display the specified resource.
@@ -72,7 +68,6 @@ class ItemsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
         public function show($id)
     {
       $item = Item::find($id);
